@@ -197,6 +197,7 @@ matrix:
           packages:
             - qtbase5-dev
             - qtdeclarative5-dev
+            - libqt5svg5-dev
             - g++-7
             - libssl-dev
             - curl
