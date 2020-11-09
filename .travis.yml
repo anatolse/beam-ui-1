@@ -68,7 +68,7 @@ matrix:
         #- travis_retry wget --no-check-certificate https://builds.beam.mw/QT5/qt5.12.9-static.tar.gz
         #- sudo mkdir /usr/local/qt5-static
         #- sudo tar -xf qt5.12.9-static.tar.gz -C /usr/local/qt5-static
-        #- brew update
+        - brew update
         - brew unlink cmake
         - brew install cmake
         - brew link cmake
