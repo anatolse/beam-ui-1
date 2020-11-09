@@ -455,9 +455,9 @@ if(LINUX)
 elseif(APPLE)
     add_custom_command(TARGET ${TARGET_NAME} POST_BUILD
         COMMAND macdeployqt 
-            \"$<TARGET_FILE_DIR:${TARGET_NAME}>/../..\"
+            \"$<TARGET_FILE_DIR:${TARGET_NAME}>\"
             -always-overwrite
-        COMMENT "Deploying Qt... $<TARGET_FILE_DIR:${TARGET_NAME}>/../.."
+        COMMENT "Deploying Qt..."
     )
 
 else()
@@ -466,7 +466,7 @@ else()
             add_custom_command(TARGET ${TARGET_NAME} POST_BUILD
                 COMMAND ${CMAKE_COMMAND} -E remove_directory "${CMAKE_CURRENT_BINARY_DIR}/windeployqt"
                 COMMAND windeployqt --release --no-virtualkeyboard --no-angle --dir "${CMAKE_CURRENT_BINARY_DIR}/windeployqt" --qmldir "${CMAKE_CURRENT_SOURCE_DIR}" "$<TARGET_FILE_DIR:${TARGET_NAME}>/$<TARGET_FILE_NAME:${TARGET_NAME}>"
-                COMMENT "Deploying Qt... $<TARGET_FILE_DIR:${TARGET_NAME}>/$<TARGET_FILE_NAME:${TARGET_NAME}>"
+                COMMENT "Deploying Qt..."
             )
             install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/windeployqt DESTINATION .)
         endif()
