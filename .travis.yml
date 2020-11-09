@@ -61,14 +61,14 @@ matrix:
         homebrew:
           packages:
           - qt5
-          update: true
+          update: false
       install:
         - export TZ=GMT-3
         - sudo systemsetup -gettimezone
         #- travis_retry wget --no-check-certificate https://builds.beam.mw/QT5/qt5.12.9-static.tar.gz
         #- sudo mkdir /usr/local/qt5-static
         #- sudo tar -xf qt5.12.9-static.tar.gz -C /usr/local/qt5-static
-        - brew update
+        #- brew update
         - brew unlink cmake
         - brew install cmake
         - brew link cmake
@@ -196,6 +196,7 @@ matrix:
             - qtbase5-dev
             - qtdeclarative5-dev
             - libqt5svg5-dev
+            - libqt5webengine5-dev
             - g++-7
             - libssl-dev
             - curl
