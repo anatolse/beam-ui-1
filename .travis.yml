@@ -192,11 +192,12 @@ matrix:
           update: true
           sources:
             - ubuntu-toolchain-r-test
+            - sourceline: 'ppa:ubuntu-toolchain-r/test'
           packages:
             - qtbase5-dev
             - qtdeclarative5-dev
             - libqt5svg5-dev
-           # - qtwebengine5-dev
+            - qtwebengine5-dev
             - g++-7
             - libssl-dev
             - curl
@@ -204,7 +205,7 @@ matrix:
             - libcups2-dev
       install:
         - export TZ=Etc/GMT-3
-        - apt list | grep webengine
+        - export TZ=Etc/GMT-3
         # install new version cmake
         - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
         - mkdir ${DEPS_DIR} && cd ${DEPS_DIR}
