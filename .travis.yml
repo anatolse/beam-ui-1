@@ -203,6 +203,8 @@ matrix:
             - curl
             - libxi-dev
             - libcups2-dev
+      before_install:
+        - apt list | grep qt
       install:
         - export TZ=Etc/GMT-3
         - export TZ=Etc/GMT-3
