@@ -196,7 +196,7 @@ matrix:
             - qtbase5-dev
             - qtdeclarative5-dev
             - libqt5svg5-dev
-            - qtwebengine5-dev
+           # - qtwebengine5-dev
             - g++-7
             - libssl-dev
             - curl
@@ -204,6 +204,7 @@ matrix:
             - libcups2-dev
       install:
         - export TZ=Etc/GMT-3
+        - apt list | grep webengine
         # install new version cmake
         - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
         - mkdir ${DEPS_DIR} && cd ${DEPS_DIR}
