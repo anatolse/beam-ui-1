@@ -61,7 +61,7 @@ matrix:
         homebrew:
           packages:
           - qt5
-          update: false
+          update: true
       install:
         - export TZ=GMT-3
         - sudo systemsetup -gettimezone
