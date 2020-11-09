@@ -192,7 +192,7 @@ matrix:
           update: true
           sources:
             - ubuntu-toolchain-r-test
-            - sourceline: 'ppa:ubuntu-toolchain-r/test'
+            - sourceline: 'ppa:beineri/opt-qt-5.15.1-xenial'
           packages:
             - qtbase5-dev
             - qtdeclarative5-dev
